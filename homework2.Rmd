@@ -55,3 +55,7 @@ simulate_means <- function(n_iterations, sample_size) {
 # 2_a: Use map function
 map_dbl(rep(5, 10000), ~ mean(rexp(.x)))
 ```        
+```{r}
+# 2_b: Use replicate function
+replicate(10000, mean(rexp(5)))
+```
