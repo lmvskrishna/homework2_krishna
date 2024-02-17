@@ -1,0 +1,23 @@
+---
+title: "hoework_2_krishna"
+author: "Krishna"
+date: "2024-02-17"
+output: html_document
+---
+
+```{r}
+
+ # Create the data table
+dt <- tribble(
+  ~x,   ~y,   ~w,   ~z,
+  210,   300,   220,   180,
+  102,   100,   119,   187,
+  176,   175,   188,   173,
+  87,   95,   91,   94,
+  202,   210,   234,   218,
+  110,   122,   131,   128
+)
+
+# 1_a: Use map function to find the mean of each column
+map_dbl(dt, mean)
+```
