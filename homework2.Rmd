@@ -59,3 +59,14 @@ map_dbl(rep(5, 10000), ~ mean(rexp(.x)))
 # 2_b: Use replicate function
 replicate(10000, mean(rexp(5)))
 ```
+
+```{r}
+# 2_c: Use a for loop to print plots for different sample sizes
+sample_sizes <- c(5, 10, 20)
+par(mfrow = c(1, length(sample_sizes)))  # Arrange plots in a single row
+for (size in sample_sizes) {
+  means <- replicate(10000, mean(rexp(size)))
+  hist(means, main = paste("Sample size =", size), xlab = "Means", col = "lightblue")
+}
+
+```
