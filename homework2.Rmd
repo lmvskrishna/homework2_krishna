@@ -6,7 +6,7 @@ output: html_document
 ---
 
 ```{r}
-
+ 
  # Create the data table
 dt <- tribble(
   ~x,   ~y,   ~w,   ~z,
@@ -21,3 +21,8 @@ dt <- tribble(
 # 1_a: Use map function to find the mean of each column
 map_dbl(dt, mean)
 ```
+```{r}
+# 1_b: Use map function to find the standard deviation of each column
+map_dbl(dt, sd)
+```
+
