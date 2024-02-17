@@ -70,3 +70,15 @@ for (size in sample_sizes) {
 }
 
 ```
+
+```{r}
+#3. Method 1
+output <- vector("double", ncol(mtcars))
+for (i in seq_along(mtcars)) {
+  output[i] <- sd(mtcars[[i]])
+}
+output
+
+# Method 2
+sapply(mtcars, sd)
+```
