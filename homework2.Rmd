@@ -44,3 +44,14 @@ summary_stats <- data.frame(
 # Print the summary statistics
 print(summary_stats)
 ```
+
+```{r}
+# Write a function to simulate means from exponential distribution
+simulate_means <- function(n_iterations, sample_size) {
+  means <- replicate(n_iterations, mean(rexp(sample_size)))
+  return(means)
+}
+
+# 2_a: Use map function
+map_dbl(rep(5, 10000), ~ mean(rexp(.x)))
+```        
