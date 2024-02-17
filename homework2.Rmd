@@ -30,3 +30,17 @@ map_dbl(dt, sd)
 map(dt, sqrt)
 
 ```
+```{r}
+# 1_d: Calculate summary statistics for each column of the dt data table
+summary_stats <- data.frame(
+  Mean = colMeans(dt),
+  Max = apply(dt, 2, max),
+  Quartile_1 = apply(dt, 2, quantile, probs = 0.25),
+  Quartile_3 = apply(dt, 2, quantile, probs = 0.75),
+  Median = apply(dt, 2, median),
+  Min = apply(dt, 2, min)
+)
+
+# Print the summary statistics
+print(summary_stats)
+```
